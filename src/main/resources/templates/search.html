@@ -37,7 +37,8 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <th:block th:each="jobs : ${jobs}">
+    <!--
+     <th:block th:each="jobs : ${jobs}">
         <table class="job-listing">
             <tr>
                 <td>ID: </td>
@@ -68,6 +69,8 @@
 
             </class></table>
     </th:block>
+    -->
+    <p th:replace = "fragments :: listSearch"></p>
 
 
 </div>
