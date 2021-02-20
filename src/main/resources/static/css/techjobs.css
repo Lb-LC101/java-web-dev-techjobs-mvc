@@ -44,3 +44,11 @@ label {
 .centered {
     text-align: center;
 }
+
+.fieldLabel {
+    color : blue;
+    font: italic bold 15px Georgia, serif;
+    text-transform: uppercase;
+
+
+}

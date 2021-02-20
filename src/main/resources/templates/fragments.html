@@ -28,34 +28,34 @@
     </div>
 
 
-
+    <!--<h1 th:text="${#strings.capitalizeWords(title)}"></h1> -->
 
 <!--fragment to search list -->
 <th:block th:fragment = "listSearch">
     <th:block th:each="jobs : ${jobs}">
         <table class="job-listing">
             <tr>
-                <td>ID: </td>
+                <td class="fieldLabel">ID: </td>
                 <td th:text="${jobs.id}"></td>
             </tr>
             <tr>
-                <td>Name: </td>
+                <td class="fieldLabel">Name: </td>
                 <td th:text="${jobs.name}"></td>
             </tr>
             <tr>
-                <td>Employer: </td>
+                <td class="fieldLabel">Employer: </td>
                 <td th:text="${jobs.employer}"></td>
             </tr>
             <tr>
-                <td>Location: </td>
+                <td class="fieldLabel">Location: </td>
                 <td th:text="${jobs.location}"></td>
             </tr>
             <tr>
-                <td>Position Type: </td>
+                <td class="fieldLabel">Position Type: </td>
                 <td th:text="${jobs.positionType}"></td>
             </tr>
             <tr>
-                <td>Skill: </td>
+                <td class="fieldLabel">Skill: </td>
                 <td th:text="${jobs.coreCompetency}"></td>
             </tr>
             </tr>
