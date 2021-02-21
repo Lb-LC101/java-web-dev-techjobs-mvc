@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
-import static org.launchcode.javawebdevtechjobsmvc.controllers.ListController.columnChoices;
+import static org.launchcode.javawebdevtechjobsmvc.controllers.TechJobsController.getColumnChoices;
+
 
 /**
  * Created by LaunchCode
@@ -19,7 +20,7 @@ public class SearchController extends TechJobsController{
 
     @RequestMapping(value = "")
     public String search(Model model) {
-        model.addAttribute("columns", columnChoices);
+        model.addAttribute("columns", TechJobsController.getColumnChoices(model));
         return "search";
     }
 
@@ -34,10 +35,10 @@ public class SearchController extends TechJobsController{
             model.addAttribute("title", searchTerm);
         } else {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
-            model.addAttribute("title", "Jobs with " + columnChoices.get(searchType) + ": " + searchTerm);
+            model.addAttribute("title", "Jobs with " + TechJobsController.getColumnChoices(model).get(searchType) + ": " + searchTerm);
         }
         model.addAttribute("jobs", jobs);
-        model.addAttribute("columns", columnChoices);
+        model.addAttribute("columns", TechJobsController.getColumnChoices(model));
         model.addAttribute("searchTerm", searchTerm);
         model.addAttribute("searchType", searchType);
 
@@ -46,7 +47,7 @@ public class SearchController extends TechJobsController{
         return "search";
     }
 
-    //bonus miission 3 : table hyperlink list access
+    //bonus mission 3 : table hyperlink list access
 //    @PostMapping(value = "results")
 //    public String linkSearchResults(Model model, @PathVariable searchType) {
    // return "search";

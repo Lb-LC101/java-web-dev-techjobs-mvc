@@ -19,5 +19,16 @@ public class TechJobsController {
         return actionChoices;
     }
 
+   @ModelAttribute("columns")
+   public static HashMap<String, String> getColumnChoices(Model model) {
+       HashMap<String, String> columnChoices = new HashMap<>();
+       columnChoices.put("all", "All");
+       columnChoices.put("employer", "Employer");
+       columnChoices.put("location", "Location");
+       columnChoices.put("positionType", "Position Type");
+       columnChoices.put("coreCompetency", "Skill");
+       model.addAttribute("columns", columnChoices);
+       return columnChoices;
+   }
 
 }
