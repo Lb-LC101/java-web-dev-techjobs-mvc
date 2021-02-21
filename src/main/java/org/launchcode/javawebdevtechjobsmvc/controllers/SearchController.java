@@ -45,4 +45,15 @@ public class SearchController {
 
         return "search";
     }
+
+    //bonus miission 3 : table hyperlink list access
+//    @PostMapping(value = "results")
+//    public String linkSearchResults(Model model, @PathVariable searchType) {
+   // return "search";
+  //  }
+
+
+
 }
+
+

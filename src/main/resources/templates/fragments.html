@@ -44,19 +44,22 @@
             </tr>
             <tr>
                 <td class="fieldLabel">Employer: </td>
-                <td th:text="${jobs.employer}"></td>
+                <td> <a th:href="@{/list/jobs(column=employer,value=${jobs.employer})}" th:text="${jobs.employer}"></a></td>
             </tr>
             <tr>
                 <td class="fieldLabel">Location: </td>
-                <td th:text="${jobs.location}"></td>
+                <td> <a th:href="@{/list/jobs(column=location,value=${jobs.location})}" th:text="${jobs.location}"></a></td>
             </tr>
             <tr>
                 <td class="fieldLabel">Position Type: </td>
-                <td th:text="${jobs.positionType}"></td>
+
+                <td> <a th:href="@{/list/jobs(column=positionType,value=${jobs.positionType})}" th:text="${jobs.positionType}"></a></td>
             </tr>
             <tr>
                 <td class="fieldLabel">Skill: </td>
-                <td th:text="${jobs.coreCompetency}"></td>
+
+               <td> <a th:href="@{/list/jobs(column=coreCompetency,value=${jobs.coreCompetency})}" th:text="${jobs.coreCompetency}"></a></td>
+
             </tr>
             </tr>
             <tr></tr>
@@ -67,3 +70,7 @@
 
 </body>
 </html>
+
+<!--
+Fragment to link to new page based on click of field content of displayed table of job results
+-->
