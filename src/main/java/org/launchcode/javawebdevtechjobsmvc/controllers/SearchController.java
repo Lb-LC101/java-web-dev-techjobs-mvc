@@ -47,14 +47,6 @@ public class SearchController extends TechJobsController{
         return "search";
     }
 
-    //bonus mission 3 : table hyperlink list access
-//    @PostMapping(value = "results")
-//    public String linkSearchResults(Model model, @PathVariable searchType) {
-   // return "search";
-  //  }
-
-
-
 }
 
 
